@@ -1,0 +1,654 @@
+@import '../../../styles/common/mixins';
+
+$bg-extra-height: 440px;
+$bg-extra-height-mobile: 350px;
+$bg-extra-height-mobile1: 250px;
+$bg-extra-height-mobile2: 210px;
+
+.home-page {
+  overflow: hidden;
+
+  &__home-hero {
+    padding-bottom: $bg-extra-height;
+
+    @include mobile(1060px) {
+      padding-bottom: $bg-extra-height-mobile;
+    }
+    @include mobile(750px) {
+      padding-bottom: $bg-extra-height-mobile1;
+    }
+    @include mobile(610px) {
+      padding-bottom: $bg-extra-height-mobile2;
+    }
+
+    &__content {
+      .hero-description {
+        font-size: 21px;
+        max-width: 580px;
+        line-height: 1.6;
+        margin: 0 auto 80px;
+        text-align: center;
+
+        @include mobile(750px) {
+          font-size: 18px;
+          text-align: left;
+          max-width: unset;
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+
+        @include mobile(620px) {
+          max-width: 513px;
+          margin-left: 0;
+        }
+      }
+
+      &__dashboard {
+        width: 100%;
+        filter: drop-shadow(
+          65.7303px 65.7303px 113.73px rgba(0, 11, 27, 0.103)
+        );
+      }
+
+      &__try-free {
+        text-align: center;
+        margin-top: 79px;
+
+        .try-button {
+          margin: 0 auto;
+        }
+
+        p {
+          margin-top: 32px;
+          line-height: 3.05;
+          font-style: italic;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__home-dashboard {
+    margin-top: -1 * $bg-extra-height;
+
+    @include mobile(1060px) {
+      margin-top: -1 * $bg-extra-height-mobile;
+    }
+    @include mobile(750px) {
+      margin-top: -1 * $bg-extra-height-mobile1;
+    }
+    @include mobile(610px) {
+      margin-top: -1 * $bg-extra-height-mobile2;
+    }
+  }
+
+  &__home-how-it-works {
+    margin-top: 51px;
+    background: #183b56;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 380px;
+
+    &__content {
+      padding-top: 72px;
+      color: #fff;
+      text-align: center;
+
+      .home-tag {
+        margin: 0 auto;
+      }
+
+      .heading {
+        font-size: 50px;
+        font-weight: 700;
+        padding: 32px 0;
+
+        @include mobile(620px) {
+          font-size: 32px;
+        }
+      }
+
+      &__thumbnail {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.1529411765),
+            rgba(0, 0, 0, 0.6431372549)
+          ),
+          url(../../../assets/images/beezop-video-thumb.jpeg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+        max-width: 749px;
+        height: 442px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -380px;
+        position: relative;
+
+        @include mobile(847px) {
+          max-width: calc(100% - 86px);
+        }
+
+        &::after {
+          content: '';
+          background: linear-gradient(
+            180deg,
+            rgba(253, 253, 255, 0.05) 50%,
+            rgba(195, 218, 241, 0.05) 172.54%
+          );
+          box-shadow: inset 0px -3px 8px rgb(255 255 255 / 20%);
+          border-radius: 35px 35px 0 0;
+          max-width: 749px;
+          height: 210px;
+          width: 100%;
+          position: absolute;
+          padding: 0 35px;
+          z-index: -1;
+          bottom: 44px;
+
+          @include mobile(847px) {
+            width: 110%;
+            box-sizing: border-box;
+          }
+        }
+
+        &__text {
+          max-width: 538px;
+          margin: 0 auto;
+          color: #fff;
+
+          img {
+            height: 80px;
+          }
+
+          p {
+            margin-top: 38px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.67;
+
+            @include mobile(620px) {
+              font-size: 16px;
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__home-features {
+    padding-top: 157px;
+    margin-bottom: 120px;
+    padding-right: 0;
+
+    @include mobile(916px) {
+      padding-top: 149px;
+      padding-right: 20px;
+    }
+
+    &__content {
+      display: flex;
+      max-width: 1390px;
+
+      @include mobile(916px) {
+        max-width: 600px;
+        flex-direction: column-reverse;
+      }
+
+      &__phone {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 55px;
+
+        @include mobile(916px) {
+          padding-left: 0;
+          max-width: fit-content;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 109px;
+          margin-top: 109px;
+        }
+
+        &::after {
+          content: '';
+          width: 1000px;
+          height: calc(100% - 128px);
+          position: absolute;
+          background: linear-gradient(180deg, #0f57d4 0%, #039fea 100%);
+          border-radius: 0px 0px 20px 0px;
+          right: 100px;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+      &__slider-wrapper {
+        flex: 1;
+        overflow: auto;
+
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 48px;
+
+          @include mobile(916px) {
+            padding: 0;
+          }
+
+          .text {
+            &__title {
+              max-width: 413px;
+              margin-bottom: 40px;
+              margin-top: 40px;
+              font-size: 40px;
+              font-weight: 700;
+              line-height: 1.2;
+
+              @include mobile(916px) {
+                font-size: 32px;
+                line-height: 1.5;
+                margin-bottom: 32px;
+                margin-top: 24px;
+              }
+            }
+          }
+
+          .controls {
+            display: flex;
+            gap: 20px;
+
+            @include mobile(916px) {
+              display: none;
+            }
+            button {
+              background: #fff;
+              border-radius: 50%;
+              height: 56px;
+              width: 56px;
+              border: 2px solid var(--bz-black);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: 0.5s ease;
+            }
+            .slider-left {
+              transform: rotate(180deg);
+
+              &:disabled {
+                opacity: .3;
+              }
+            }
+          }
+        }
+
+        &__slider {
+          display: flex;
+          overflow: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+
+          @include mobile(916px) {
+            flex-direction: column;
+            padding: 0;
+          }
+
+          .slider-item {
+            padding: 0 0 0 48px;
+            scroll-snap-align: start;
+            display: flex;
+
+            @include mobile(916px) {
+              width: 100%;
+              margin-bottom: 32px;
+              padding: 0;
+            }
+
+            &__content {
+              background: #fff;
+              padding: 34px 30px 37px 30px;
+              border-radius: 20px;
+              width: 329px;
+              flex-shrink: 0;
+
+              @include mobile(916px) {
+                width: 100%;
+              }
+
+              .index {
+                font-size: 32px;
+                line-height: 1.5;
+                font-weight: 700;
+                padding-bottom: 13px;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  height: 32px;
+                  width: 32px;
+                  background-image: url(../../../assets/svg/ft-bg.svg);
+                  background-position: center;
+                  background-size: cover;
+                  left: 0;
+                  top: 4px;
+                }
+              }
+
+              .title {
+                font-size: 21px;
+                line-height: 1.52;
+                font-weight: 700;
+                max-width: 226px;
+              }
+
+              .description {
+                color: var(--bz-gray);
+                font-size: 18px;
+                padding: 22px 0 0 0;
+                line-height: 1.52;
+              }
+            }
+          }
+
+          .fake {
+            opacity: 0;
+
+            @include mobile(916px) {
+              display: none;
+            }
+          }
+        }
+
+        &__button {
+          width: fit-content;
+          margin-left: auto;
+          margin-top: 58px;
+          padding-right: 50px;
+
+          @include mobile(916px) {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__home-checklists {
+    background: linear-gradient(
+      44.56deg,
+      #0977de 14.64%,
+      #0590e5 59.85%,
+      #01aaed 85.36%
+    );
+    padding-top: 112px;
+    padding-bottom: 112px;
+    color: #fff;
+
+    &__content {
+      max-width: 1340px;
+      &__columns {
+        display: flex;
+        gap: 56px;
+
+        @include mobile(916px) {
+          max-width: 600px;
+          flex-direction: column;
+          margin: 0 auto;
+          gap: 0;
+        }
+
+        &__column {
+          flex: 1;
+          .heading {
+            padding-bottom: 46px;
+
+            h3 {
+              line-height: 1.3;
+              letter-spacing: 0.01em;
+              font-size: 43px;
+            }
+
+            p {
+              padding-top: 16px;
+              font-size: 18px;
+              line-height: 1.67;
+            }
+          }
+
+          .group {
+            background: linear-gradient(
+              180deg,
+              rgba(253, 253, 255, 0.05) 50%,
+              rgba(195, 218, 241, 0.05) 172.54%
+            );
+            box-shadow: inset 0px -3px 8px rgb(255 255 255 / 20%);
+            border-radius: 35px;
+            padding: 24px;
+            width: 100%;
+            margin-bottom: 56px;
+
+            @include mobile(916px) {
+              margin-bottom: 32px;
+            }
+
+            &__title {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 2.67;
+            }
+            p {
+              opacity: 0.8;
+              margin-bottom: 19px;
+              line-height: 1;
+              display: flex;
+              align-items: center;
+
+              &::before {
+                content: '';
+                width: 16px;
+                height: 16px;
+                background: url(../../../assets/svg/tick.svg);
+                background-position: center;
+                background-size: cover;
+                display: block;
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      &__action {
+        text-align: center;
+        font-size: 18px;
+        margin: 0 auto;
+
+        h4 {
+          font-weight: 600;
+          line-height: 2.67;
+          margin-bottom: 16px;
+        }
+        .checklist-btn {
+          margin: 0 auto;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__home-pricing {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @include mobile(916px) {
+      padding-top: 102px;
+    }
+
+    &__content {
+      max-width: 1340px;
+      margin: 0 auto;
+
+      @include mobile(916px) {
+        max-width: 600px;
+      }
+
+      &__header {
+        text-align: center;
+
+        @include mobile(916px) {
+          text-align: left;
+        }
+
+        &__tag {
+          font-size: 16px;
+          padding: 6px 15px;
+          margin-bottom: 32px;
+          margin-left: auto;
+          margin-right: auto;
+
+          @include mobile(916px) {
+            margin-left: 0;
+          }
+        }
+        &__heading {
+          letter-spacing: 0.01em;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 1.2;
+
+          @include mobile(916px) {
+            font-size: 32px;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      &__cards {
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+        gap: 48px;
+
+        @include mobile(916px) {
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        .subscription-package {
+          background: #fff;
+          padding: 45px 36px 63px 36px;
+          border-radius: 8px;
+          max-width: 320px;
+          flex: 1;
+          position: relative;
+
+          @include mobile(916px) {
+            max-width: unset;
+          }
+
+          &:nth-child(3)::after {
+            background: var(--bz-primary);
+          }
+
+          &:nth-child(2)::after {
+            background: #36b37e;
+          }
+
+          &::after {
+            content: '';
+            height: 3px;
+            position: absolute;
+            background: var(--bz-gray);
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+
+          &__price {
+            font-size: 36px;
+            font-weight: 600;
+            float: left;
+            margin-right: 5px;
+          }
+
+          &__duration {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 14px 0;
+          }
+
+          &__description {
+            color: var(--bz-gray);
+            line-height: 1.75;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5eaf4;
+          }
+
+          &__offers {
+            padding-top: 32px;
+
+            .offer {
+              margin-bottom: 24px;
+              display: flex;
+              gap: 12px;
+              align-items: center;
+
+              &::before {
+                content: '';
+                height: 24px;
+                width: 24px;
+                background-image: url(../../../assets/svg/green-tick.svg);
+                background-size: cover;
+                background-position: center;
+              }
+            }
+          }
+        }
+      }
+
+      &__button {
+        margin-top: 64px;
+
+        a {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &__home-questions {
+    background: #183b56;
+    color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__content {
+      @include mobile(986px) {
+        max-width: 600px;
+      }
+      &__header {
+        font-size: 40px;
+        padding-bottom: 40px;
+
+        @include mobile(986px) {
+          font-size: 32px;
+        }
+      }
+      &__questions{
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+
+        
+
+        @include mobile(986px) {
+          display: block;
+        }
+      }
+    }
+  }
+}

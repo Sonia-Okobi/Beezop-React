@@ -1,0 +1,57 @@
+.video-card {
+  min-height: 309px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 16px 40px;
+  text-align: center;
+  color: var(--bz-black);
+
+  &__thumbnail {
+    min-height: 137px;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: top;
+    background-image: linear-gradient(
+        rgba(3, 67, 123, 0.2),
+        rgba(3, 67, 123, 0.2)
+      ),
+      url(../../../../assets/svg/video-thumb-nail.svg);
+
+    &__play-btn {
+      filter: grayscale(0.8);
+      transition: 0.2s ease;
+      
+      img {
+        height: 45px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 198px;
+    margin: 0px auto 24px;
+  }
+
+  .play-btn {
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      background-image: url(../../../../assets/svg/gradient-arrow.svg);
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.team-mate {
+  margin-bottom: 30px;
+  &__picture {
+    position: relative;
+    z-index: -1;
+    height: 320px;
+    max-width: 360px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 24px 24px 0 0;
+    background-color: var(--bz-white);
+    filter: drop-shadow(0px 2.52278px 5.04556px rgba(15, 24, 44, 0.15));
+
+    img {
+      width: 100%;
+      border-radius: 24px 24px 0 0;
+      position: absolute;
+      height: 100%;
+      object-position: top;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0 ;
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0px 3px 40px rgb(0 0 0 / 5%);
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__mate {
+        .name {
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 4px;
+        }
+      }
+
+      &__socials {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    .about {
+      color: #5a6073;
+      line-height: 1.5;
+      font-weight: 300;
+      padding: 16px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.signup-page {
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: var(--bz-gray);
+    max-width: 286px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+
+    a {
+      color: var(--bz-primary);
+    }
+  }
+}

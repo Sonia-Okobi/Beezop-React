@@ -1,0 +1,50 @@
+.base-input {
+  position: relative;
+
+  &__space {
+    width: 100%;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid #e6ebec;
+    border-radius: 8px;
+    transition: 0.2s ease-out;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 400;
+    caret-color: var(--bz-primary);
+
+    &:focus {
+      border: 1px solid var(--bz-primary);
+
+      &:invalid {
+        border-color: var(--mc-red);
+      }
+    }
+ 
+
+    &:focus + .label,
+    &:not(&:placeholder-shown) + .label  {
+      color: var(--bz-primary);
+      top: -14px;
+      font-size: 12px;
+    }
+
+    &:focus:invalid + .label {
+      color: var(--mc-red);
+    }
+  }
+
+
+  .label {
+    position: absolute;
+    pointer-events: none;
+    top: 14px;
+    left: 12px;
+    line-height: 1;
+    background: #fff;
+    padding: 5px 6px;
+    color: var(--bz-gray);
+    font-size: 14px;
+    transition: 0.2s ease-out;
+  }
+}

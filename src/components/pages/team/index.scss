@@ -1,0 +1,38 @@
+@import '../../../styles/common/mixins';
+
+.team-page {
+  &__team-hero {
+    position: relative;
+    z-index: -1;
+    padding-bottom: 137px;
+    &__content {
+      .team-description {
+        max-width: 697px;
+
+        @include mobile(750px) {
+          text-align: left;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__team-mates {
+    margin-top: -137px;
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 70px;
+
+      @include mobile(986px) {
+        grid-template-columns: repeat(2, 1fr);
+        // max-width: 700px;
+      }
+
+      @include mobile(750px) {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../../styles/common/mixins';
+
+.support-page {
+  &__support-hero {
+    padding-bottom: 212px;
+    &__content {
+      .support-description {
+        max-width: 523px;
+
+        @include mobile(750px) {
+          text-align: left;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &__support-form {
+    margin-top: -212px;
+    &__content {
+      background: #fff;
+      min-height: 655px;
+      box-shadow: 0px 10px 35px rgb(0 0 0 / 3%);
+      border-radius: 24px;
+      padding: 64px;
+      color: var(--bz-black);
+
+      .input-title {
+        margin-top: 30px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        margin-bottom: 10px;
+      }
+
+      .input-description {
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .textarea {
+        height: 144px;
+      }
+
+      &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile(750px) {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+
+        .file-upload {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 8px;
+          position: relative;
+          border: 2px dashed var(--bz-primary);
+          padding: 14px 33px;
+          cursor: pointer;
+          color: var(--bz-gray);
+          width: fit-content;
+
+          .upload {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0;
+          }
+        }
+
+        .support-btn {
+          flex-shrink: 0;
+
+          @include mobile(750px) {
+            font-size: 16px;
+            padding-left: 64px;
+            padding-right: 64px;
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

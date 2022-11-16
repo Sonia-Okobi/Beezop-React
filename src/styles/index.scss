@@ -1,0 +1,46 @@
+@import './common/page';
+@import './common/base-button';
+@import '../assets/fonts/fonts';
+
+:root {
+  --bz-primary: #3b82f6;
+  --bz-background: #fafafe;
+  --bz-black: #232340;
+  --bz-white: #eaedf3;
+  --bz-gray: #737a91;
+  --mc-red: #ff2626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+  list-style: none;
+  font-family: 'HK Grotesk', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  background: var(--bz-background);
+  color: var(--bz-black);
+  word-break: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
