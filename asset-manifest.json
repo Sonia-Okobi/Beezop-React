@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Beezop-React/static/css/main.b6b552b3.css",
-    "main.js": "/Beezop-React/static/js/main.9bf169b3.js",
+    "main.css": "/Beezop-React/static/css/main.bdd01758.css",
+    "main.js": "/Beezop-React/static/js/main.7a734f8b.js",
     "static/js/787.fffd12ac.chunk.js": "/Beezop-React/static/js/787.fffd12ac.chunk.js",
     "static/media/video-thumb-nail.svg": "/Beezop-React/static/media/video-thumb-nail.980f74c98934c6a5c3b6.svg",
     "static/media/app.svg": "/Beezop-React/static/media/app.14700789b1976c0fa9d6fc4c7ee1915b.svg",
@@ -67,12 +67,12 @@
     "static/media/green-tick.svg": "/Beezop-React/static/media/green-tick.ad5f2d0e9f419465ab2c.svg",
     "index.html": "/Beezop-React/index.html",
     "static/media/ft-bg.svg": "/Beezop-React/static/media/ft-bg.fc3085bf40ccc9feab85.svg",
-    "main.b6b552b3.css.map": "/Beezop-React/static/css/main.b6b552b3.css.map",
-    "main.9bf169b3.js.map": "/Beezop-React/static/js/main.9bf169b3.js.map",
+    "main.bdd01758.css.map": "/Beezop-React/static/css/main.bdd01758.css.map",
+    "main.7a734f8b.js.map": "/Beezop-React/static/js/main.7a734f8b.js.map",
     "787.fffd12ac.chunk.js.map": "/Beezop-React/static/js/787.fffd12ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6b552b3.css",
-    "static/js/main.9bf169b3.js"
+    "static/css/main.bdd01758.css",
+    "static/js/main.7a734f8b.js"
   ]
 }
