@@ -103,13 +103,13 @@ export default function NavBar() {
           <span className="line"></span>
         </button>
         <ul className={`nav-bar__links ${openMenu ? 'active' : ''}`}>
-          <a href="#howitworks" className="nav-bar__links__link">
+          <a href="#howitworks" onClick={handleToggle} className="nav-bar__links__link">
             How it works
           </a>
-          <a href="#features" className="nav-bar__links__link">
+          <a href="#features" onClick={handleToggle} className="nav-bar__links__link">
             Features
           </a>
-          <a href="#pricing" className="nav-bar__links__link">
+          <a href="#pricing" onClick={handleToggle} className="nav-bar__links__link">
             Pricing
           </a>
           <a href="/signinpage" className="nav-bar__links__link">
