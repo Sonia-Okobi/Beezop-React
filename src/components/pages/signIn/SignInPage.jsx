@@ -91,9 +91,9 @@ export default function SignInPage() {
                 />
               )}
 
-              <div onClick={toggle} className="eye">
+              <button type='button' onClick={toggle} className="eye">
                 {click ? <img src={unsee} alt="" /> : <img src={eye} alt="" />}
-              </div>
+              </button>
             </div>
             <a className="password" href="/forgetpasswordpage">
               Forgot Password?

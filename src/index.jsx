@@ -12,3 +12,5 @@ root.render(
 );
 
 reportWebVitals();
+
+// "homepage": "http://Sonia-Okobi.github.io/Beezop-React",
