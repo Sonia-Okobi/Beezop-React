@@ -279,7 +279,7 @@ $bg-extra-height-mobile2: 210px;
               transform: rotate(180deg);
 
               &:disabled {
-                opacity: .3;
+                opacity: 0.3;
               }
             }
           }
@@ -371,6 +371,7 @@ $bg-extra-height-mobile2: 210px;
 
           @include mobile(916px) {
             margin-right: auto;
+            padding-right: 0;
           }
         }
       }
@@ -638,12 +639,10 @@ $bg-extra-height-mobile2: 210px;
           font-size: 32px;
         }
       }
-      &__questions{
+      &__questions {
         display: grid;
         column-gap: 30px;
         grid-template-columns: repeat(2, 1fr);
-
-        
 
         @include mobile(986px) {
           display: block;
