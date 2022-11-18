@@ -1,3 +1,5 @@
+@import '../../../../styles/common/mixins';
+
 .video-modal {
   position: fixed;
   overflow: hidden;
@@ -18,24 +20,34 @@
     display: grid;
     place-items: center;
 
-    &__header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 20px;
+    @include mobile(600px) {
+      padding: 20px;
     }
 
-    &__video{
-        iframe{
-            background: #fff;
-            box-shadow: 0 0 10px rgb(185 185 185 / 19%);
-            border-radius: 8px;
-            position: relative !important;
-            width: 50vw !important;
-            height: 50vh !important;
-            display: block;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__video {
+      width: 100%;
+
+      iframe {
+        background: #fff;
+        box-shadow: 0 0 10px rgb(185 185 185 / 19%);
+        border-radius: 8px;
+        position: relative !important;
+        width: 50vw !important;
+        height: 50vh !important;
+        display: block;
+
+        @include mobile(600px) {
+          width: 100% !important;
         }
+      }
     }
   }
 }

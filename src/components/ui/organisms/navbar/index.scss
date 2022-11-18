@@ -121,7 +121,6 @@
       overflow: auto;
       pointer-events: none;
       clip-path: circle(0 at 100% 100%);
-      // transform: scale(1.5);
 
       &.active {
         pointer-events: unset;
